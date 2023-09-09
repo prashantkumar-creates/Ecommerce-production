@@ -8,12 +8,14 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoute.js";
 import cors from 'cors';
 import path from "path";
+import {fileURLToPath } from 'url';
 //  configh env
 dotenv.config();
 
 //config database 
 connectDB();
-
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const app = express();
 
 //middleware
