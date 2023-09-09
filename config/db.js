@@ -7,8 +7,7 @@ const connectDB = async () => {
             , {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
-                serverSelectionTimeoutMS: 5000, // Adjust the timeout as needed
-                autoReconnect: true,
+               autoReconnect: true,
 
             });
         console.log(`connected to mongodb database ${conn.connection.host}`.bgRed);
